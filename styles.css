@@ -1,0 +1,205 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+h1 {
+    text-align: center;
+    color: #00FFFF;
+    margin-top: 20px;
+}
+
+section {
+    padding: 20px;
+}
+
+/* Encabezado */
+header {
+    background-color: #1f1f1f;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Nueva sección con fondo */
+.hero-section {
+    background-image: url('Multimedia/FotoLinkedinPortafolio.jpeg'); /* Cambia 'fondo.jpg' por la imagen de fondo deseada */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.hero-content {
+    text-align: center;
+    padding-bottom: 600px;
+    
+}
+
+.hero-content h1 {
+    font-size: 5em;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    color: #000; /* Color del texto */
+    text-shadow: 
+        3px 3px 0 #00FFFF,  
+        -3px -3px 0 #00FFFF,
+        3px -3px 0 #00FFFF,
+        -3px 3px 0 #00FFFF; /* Contorno negro */
+    
+}
+
+.hero-content h4 {
+    font-size: 2em;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    color: #FFA500; /* Color del texto */ 
+    text-shadow: 
+        2px 2px 0 #000,  
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000; /* Contorno negro */
+}
+
+.hero-content .btn {
+    background-color: #000;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    
+}
+
+.hero-content .btn:hover {
+    background-color: #FFA500;
+}
+
+/* Sección de "Sobre Mí" */
+.about-me img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+.about-me p {
+    font-size: 18px; /* Aumenta el tamaño de la fuente */
+    line-height: 1.6; /* Mejora el espaciado entre líneas */
+    text-align: justify; /* Para alineación justificada */
+}
+
+/* Estilos para "Experiencia Laboral" */
+.experience .job {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #2B2B2B;
+    border-left: 5px solid #00FFFF;
+}
+
+.job-date {
+    font-style: italic;
+    color: #FFA500;
+}
+
+/* Proyectos */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #2B2B2B;
+    padding: 20px;
+    border: 1px solid #00FFFF;
+}
+
+.project-card:hover {
+    border-color: #FFA500;
+}
+
+/* Habilidades */
+.habilidades-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.habilidad {
+    background-color: #007bff;
+    color: white;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Estilos para el video resumen */
+.video-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.video-container video {
+    max-width: 80%;
+    border: 3px solid #00FFFF;
+    border-radius: 10px;
+}
+
+/* Estilos para las secciones */
+.grey-1 {
+    background-color: #1A1A1A;
+}
+
+.grey-2 {
+    background-color: #2B2B2B;
+}
+
+.grey-3 {
+    background-color: #333333;
+}
+
+.grey-4 {
+    background-color: #3C3C3C;
+}
+
+.grey-5 {
+    background-color: #454545;
+}
+
+/* Contacto */
+#contacto p {
+    text-align: center;
+}
