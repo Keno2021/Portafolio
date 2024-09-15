@@ -115,6 +115,11 @@ nav ul li a:hover {
     display: block;
     margin: 0 auto 20px auto;
 }
+.experience {
+    max-width: 50%; /* Limita el ancho al 50% del contenedor */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    padding: 20px;
+}
 .about-me p {
     font-size: 18px; /* Aumenta el tamaño de la fuente */
     line-height: 1.6; /* Mejora el espaciado entre líneas */
@@ -152,13 +157,13 @@ nav ul li a:hover {
 }
 
 /* Habilidades */
-.habilidades-contenedor {
+.skills-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.habilidad {
+.skill {
     background-color: #007bff;
     color: white;
     margin: 5px;
