@@ -6,15 +6,26 @@ body {
     background-color: #121212;
     color: #ffffff;
 }
+section h1 {
+    margin-top: 60px; /* Ajusta este valor según tus necesidades */
+    padding: 25px;
+}
+
+/* Espacio arriba para subtítulos dentro de secciones, como en "About Me" */
+.about-me .subtitle {
+    margin-top: 40px; /* Ajusta este valor según tus necesidades */
+}
 
 h1 {
     text-align: center;
     color: #00FFFF;
     margin-top: 20px;
+    transition: color 0.3s ease;
 }
 
-section {
-    padding: 20px;
+
+h1:hover {
+    color: #FFA500;
 }
 
 /* Encabezado */
@@ -26,6 +37,7 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
+    transition: background-color 0.3s ease;
 }
 
 nav ul {
@@ -44,6 +56,7 @@ nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-size: 1.2em;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
@@ -52,7 +65,7 @@ nav ul li a:hover {
 
 /* Nueva sección con fondo */
 .hero-section {
-    background-image: url('Multimedia/FotoLinkedinPortafolio.jpeg'); /* Cambia 'fondo.jpg' por la imagen de fondo deseada */
+    background-image: url('Multimedia/FotoLinkedinPortafolio.jpeg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -60,6 +73,7 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     color: #ffffff;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero-content {
@@ -71,25 +85,29 @@ nav ul li a:hover {
     font-size: 5em;
     margin-top: 20px;
     margin-bottom: 0px;
-    color: #000; /* Color del texto */
+    color: #000;
     text-shadow: 
         3px 3px 0 #00FFFF,  
         -3px -3px 0 #00FFFF,
         3px -3px 0 #00FFFF,
-        -3px 3px 0 #00FFFF; /* Contorno negro */
-    
+        -3px 3px 0 #00FFFF;
+    transition: transform 0.3s ease;
+}
+
+.hero-content h1:hover {
+    transform: scale(1.05);
 }
 
 .hero-content h4 {
     font-size: 2em;
     margin-top: 0px;
     margin-bottom: 25px;
-    color: #FFA500; /* Color del texto */ 
+    color: #FFA500; 
     text-shadow: 
         2px 2px 0 #000,  
         -2px -2px 0 #000,
         2px -2px 0 #000,
-        -2px 2px 0 #000; /* Contorno negro */
+        -2px 2px 0 #000;
 }
 
 .hero-content .btn {
@@ -99,30 +117,41 @@ nav ul li a:hover {
     text-decoration: none;
     font-size: 1.2em;
     border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .hero-content .btn:hover {
     background-color: #FFA500;
+    transform: scale(1.05);
 }
 
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
     .hero-content {
-        padding-bottom: 200px; /* Reduce padding to make content more visible */
+        padding-bottom: 200px;
     }
 
     .hero-content h1 {
-        font-size: 2.5em; /* Smaller font size for mobile */
+        font-size: 2.5em;
     }
 
     .hero-content h4 {
-        font-size: 1.2em; /* Adjust subtitle size */
+        font-size: 1.2em;
     }
 
     .hero-section {
-        background-position: top center; /* Adjust background image for better visibility */
+        background-position: top center;
         background-size: cover;
     }
+}
+
+/* Sección de "Sobre Mí" */
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #1A1A1A; /* Fondo opcional para destacar la sección */
 }
 
 /* Sección de "Sobre Mí" */
@@ -130,40 +159,57 @@ nav ul li a:hover {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    display: block;
-    margin: 0 auto 20px auto;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
 }
+
+.about-me img:hover {
+    transform: scale(1.05);
+}
+.about-me p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 800px; /* Ancho máximo para texto */
+    margin: 0 auto; /* Centra el texto */
+}
+
 .subtitle {
-    color: #00FFFF; /* Light blue color for subtitles */
+    color: #00FFFF;
     font-size: 1.5em;
     margin-top: 20px;
     margin-bottom: 10px;
-    text-shadow: 1px 1px 2px #000; /* Optional text shadow for better contrast */
-}
-.experience {
-    max-width: 50%; /* Limita el ancho al 50% del contenedor en pantallas grandes */
-    margin: 0 auto; /* Centra el contenedor en la página */
-    padding: 20px;
-}
-.about-me p {
-    font-size: 18px; /* Aumenta el tamaño de la fuente */
-    line-height: 1.6; /* Mejora el espaciado entre líneas */
-    text-align: justify; /* Para alineación justificada */
+    text-shadow: 1px 1px 2px #000;
+    text-align: center;
 }
 
 /* Estilos para "Experiencia Laboral" */
-.experience .job {
-    margin-bottom: 20px;
-    padding: 10px;
+.experience {
+    max-width: 1000px; /* Limita el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px;
     background-color: #2B2B2B;
-    border-left: 5px solid #00FFFF;
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
 }
 
-/* Media Queries para móviles */
+.experience .job {
+    margin-bottom: 20px;
+    padding: 20px; /* Aumenta el padding para mayor altura */
+    background-color: #1A1A1A; /* Cambia el color de fondo de los trabajos */
+    border-left: 5px solid #00FFFF;
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+    display: flex;
+    flex-direction: column; /* Asegura que el contenido esté en columna */
+}
+
+.experience .job:hover {
+    background-color: #333333;
+}
+
 @media (max-width: 768px) {
     .experience {
-        max-width: 100%; /* En pantallas móviles, el ancho será del 100% */
         padding: 10px; /* Reduce el padding para adaptarse a pantallas pequeñas */
+        max-width: 100%; /* Asegura que el ancho máximo sea del 100% */
     }
 
     .experience .job {
@@ -171,6 +217,7 @@ nav ul li a:hover {
         margin-bottom: 15px; /* Reduce el espacio entre trabajos */
     }
 }
+
 .job-date {
     font-style: italic;
     color: #FFA500;
@@ -178,19 +225,64 @@ nav ul li a:hover {
 
 /* Proyectos */
 .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
 .project-card {
+    display: flex;
+    flex-direction: row;
     background-color: #2B2B2B;
     padding: 20px;
     border: 1px solid #00FFFF;
+    width: 100%;
+    max-width: 600px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
 .project-card:hover {
     border-color: #FFA500;
+    transform: scale(1.02);
+}
+
+.project-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.project-info {
+    flex-grow: 1;
+}
+
+.project-info h4 {
+    margin: 0;
+    color: #00FFFF;
+}
+
+.project-info p {
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.project-info .btn {
+    margin-top: 10px;
+    background-color: #000;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-info .btn:hover {
+    background-color: #FFA500;
+    transform: scale(1.05);
 }
 
 /* Habilidades */
@@ -206,6 +298,11 @@ nav ul li a:hover {
     margin: 5px;
     padding: 10px;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.skill:hover {
+    background-color: #0056b3;
 }
 
 /* Estilos para el video resumen */
@@ -218,6 +315,11 @@ nav ul li a:hover {
     max-width: 80%;
     border: 3px solid #00FFFF;
     border-radius: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.video-container video:hover {
+    border-color: #FFA500;
 }
 
 /* Estilos para las secciones */
