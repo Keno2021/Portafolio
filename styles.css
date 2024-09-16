@@ -65,7 +65,6 @@ nav ul li a:hover {
 .hero-content {
     text-align: center;
     padding-bottom: 600px;
-    
 }
 
 .hero-content h1 {
@@ -100,11 +99,30 @@ nav ul li a:hover {
     text-decoration: none;
     font-size: 1.2em;
     border-radius: 5px;
-    
 }
 
 .hero-content .btn:hover {
     background-color: #FFA500;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .hero-content {
+        padding-bottom: 200px; /* Reduce padding to make content more visible */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em; /* Smaller font size for mobile */
+    }
+
+    .hero-content h4 {
+        font-size: 1.2em; /* Adjust subtitle size */
+    }
+
+    .hero-section {
+        background-position: top center; /* Adjust background image for better visibility */
+        background-size: cover;
+    }
 }
 
 /* Sección de "Sobre Mí" */
@@ -115,8 +133,15 @@ nav ul li a:hover {
     display: block;
     margin: 0 auto 20px auto;
 }
+.subtitle {
+    color: #00FFFF; /* Light blue color for subtitles */
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px #000; /* Optional text shadow for better contrast */
+}
 .experience {
-    max-width: 50%; /* Limita el ancho al 50% del contenedor */
+    max-width: 50%; /* Limita el ancho al 50% del contenedor en pantallas grandes */
     margin: 0 auto; /* Centra el contenedor en la página */
     padding: 20px;
 }
@@ -134,6 +159,18 @@ nav ul li a:hover {
     border-left: 5px solid #00FFFF;
 }
 
+/* Media Queries para móviles */
+@media (max-width: 768px) {
+    .experience {
+        max-width: 100%; /* En pantallas móviles, el ancho será del 100% */
+        padding: 10px; /* Reduce el padding para adaptarse a pantallas pequeñas */
+    }
+
+    .experience .job {
+        padding: 15px; /* Ajusta el padding interno */
+        margin-bottom: 15px; /* Reduce el espacio entre trabajos */
+    }
+}
 .job-date {
     font-style: italic;
     color: #FFA500;
@@ -207,4 +244,15 @@ nav ul li a:hover {
 /* Contacto */
 #contacto p {
     text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #1f1f1f;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
